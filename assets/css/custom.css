@@ -1,0 +1,28 @@
+/* overwriting styling done by the semantic ui framework */
+.ui.menu {
+	box-shadow: 0 -2px 10px 2px black;
+	border-radius: 0;
+}
+
+.ui.menu>.item:first-child {
+	border-radius: 0;
+}
+
+.ui.menu .item {
+	font-size: 1.5rem;
+	padding: .8em .95em;
+}
+
+.ui.menu .item:before {
+	display: none;
+}
+
+.ui.menu .active.item {
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+}
+
+#splashBody {
+	height: 100%;
+}
