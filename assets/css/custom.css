@@ -1,7 +1,22 @@
 /* overwriting styling done by the semantic ui framework */
+h1, h2 {
+	color: white;
+}
+
+h1 {
+	font-size: 6.5em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 3em;
+	margin: 0;
+}
+
 .ui.menu {
 	box-shadow: 0 -2px 10px 2px black;
 	border-radius: 0;
+	z-index: 100;
 }
 
 .ui.menu>.item:first-child {
@@ -25,4 +40,12 @@
 
 #splashBody {
 	height: 100%;
+	max-width: 100%;
+	background-image: url("../images/high-tech-buildings-bg.png");
+	background-position: center center;
+}
+
+#titleWrapper {
+	text-align: center;
+	margin-top: 60px;
 }
