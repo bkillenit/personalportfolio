@@ -8,13 +8,17 @@ h1 {
 	font-size: 6.5em;
 }
 
-h2 {
-	font-size: 5.5em;
-}
-
 h3 {
 	font-size: 3em;
+}
 
+/* Firefox puts clsoing p tags before and after a ul, which applys any margin rules to both tags 
+		universal ul rules below help fight that */
+ul {
+	margin: 0;
+	margin-top: -10px;
+	margin-left: 15px;
+	padding: 0;
 }
 
 p {
@@ -48,7 +52,7 @@ p {
 /* ---------- */
 
 .ui.centered.grid {
-	background-image: url("../images/high-tech-buildings-bg.png");
+	background-image: url("../images/high-tech-buildings-bg-compressed.png");
 	background-position: center center;
 }
 
@@ -69,8 +73,11 @@ p {
 }
 
 .page.header {
-	height: 210px;
-	padding-top: 85px;
+	height: 160px;
+	padding-top: 75px;
+	color: white;
+	font-size: 4em;
+	font-weight: 700;
 	text-align: center;
 	background-color: black;
 }
@@ -86,12 +93,13 @@ p {
 }
 
 .body.text{
+	font-size: 1.2em;
 	color: #7f8c8d;
 }
 
-.body.text p {
+.body.text p,
+#profile {
 	margin-bottom: 20px;
-	font-size: 1.2em;
 }
 
 .body.text b {
@@ -103,9 +111,29 @@ p {
 	margin-bottom: 0px;
 }
 
+#profile img,
+#profile p {
+	display: inline-block;
+}
+
+#profile p {
+	position: relative;
+	top: -17px;
+	left: 10px
+}
+
 .body.quote {
 	margin-top: 40px;
 	font-size: 1.4em;
 	font-weight: 100;
 	text-align: center;
+}
+
+#profilePicture {
+	display: inline-block;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	padding: 5px;
+	border: 1px solid gray;
 }

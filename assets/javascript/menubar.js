@@ -1,6 +1,6 @@
 var menuBarHTML = ' \
   <nav class="ui menu fixed"> \
-    <a href="./index.html" id="index" class="item">Home</a> \
+    <a href="./" id="index" class="item">Home</a> \
     <div class="right menu"> \
       <a href="./about.html" id="about" class="item">About</a> \
       <a href="./experience.html" id="experience" class="item">Experience</a> \
@@ -19,11 +19,7 @@ activePage = "";
 navBarPagesArray = ["index","about", "experience","portfolio", "contact"];
 
 function contains(string, searchValue) {
-	if(string.indexOf(searchValue) > -1 ) {
-		return true;
-	} else {
-		return false;
-	}
+	return string.indexOf(searchValue) > -1;
 }
 
 for(i = 0; i < navBarPagesArray.length; i++) {
@@ -31,8 +27,10 @@ for(i = 0; i < navBarPagesArray.length; i++) {
 		activePage = navBarPagesArray[i];
 		break;
 	}
+
+	// sets the active page to index if none of the nav bar titles are found, ie. on the index page
+	activePage = "index";
 }
 
-//used vanilla javascript to edit the DOM element instead of jQuery to avoid importing the jQuery library
-var activeNavElement = document.getElementById(activePage);
-activeNavElement.className = activeNavElement.className + " active";
+// jQuery DOM element selection based on active page, active class added to the selected element
+$('#'+activePage).addClass("active");
