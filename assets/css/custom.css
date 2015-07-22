@@ -12,7 +12,11 @@ h3 {
 	font-size: 3em;
 }
 
-/* Firefox puts clsoing p tags before and after a ul, which applys any margin rules to both tags 
+a:hover {
+	text-decoration: underline;
+}
+
+/* Firefox puts closing p tags before and after a ul, which applys any margin rules to both tags 
 		universal ul rules below help fight that */
 ul {
 	margin: 0;
@@ -25,7 +29,7 @@ p {
 	margin: 0;
 }
 
-/* ----- nav menu styling----- */
+/* ----- nav menu styling ----- */
 .ui.menu {
 	box-shadow: 0 -2px 10px 2px black;
 	border-radius: 0;
@@ -49,7 +53,44 @@ p {
 	box-shadow: none;
 	border: none;
 }
-/* ---------- */
+
+.menu > #contentLinks {
+	float: right;
+}
+
+/* ----------- Galaxy S3 - S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (max-device-width: 360px)
+  and (min-device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3) {
+		#index,
+		#contentLinks > .item {
+			width: 100%;
+		}
+
+		#contentLinks > .item {
+			float: left;
+			display: block;
+		}
+}
+
+@media only screen
+	and (max-width: 500px) {
+		#index,
+		#contentLinks > .item {
+			width: 100%;
+		}
+
+		#contentLinks > .item {
+			float: left;
+			display: block;
+		}
+}
+
+/* ----- end of menu styling ----- */
 
 .ui.centered.grid {
 	background-image: url("../images/high-tech-buildings-bg-compressed.png");
@@ -136,4 +177,17 @@ p {
 	border-radius: 50%;
 	padding: 5px;
 	border: 1px solid gray;
+}
+
+.technologies {
+	display: block;
+}
+
+.technologies .logo {
+	position: relative;
+	top: -10px;
+	display: inline-block;
+	height: 25px;
+
+	margin-right: 8px;
 }
